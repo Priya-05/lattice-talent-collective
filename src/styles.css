@@ -241,6 +241,80 @@
 .mark-match {
   fill: var(--color-amber);
 }
+.mark-spark,
+.mark-ring {
+  display: none;
+}
+
+/* Live logo in the header */
+.mark-live .mark-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: lat-draw 0.9s 0.15s ease-out forwards;
+}
+.mark-live .mark-node,
+.mark-live .mark-match,
+.mark-live .mark-ring {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.mark-live .mark-node {
+  transform: scale(0);
+  animation: mark-pop 0.35s ease-out forwards;
+}
+.mark-live .mark-node:nth-child(1) { animation-delay: 0.1s; }
+.mark-live .mark-node:nth-child(2) { animation-delay: 0.3s; }
+.mark-live .mark-node:nth-child(3) { animation-delay: 0.5s; }
+.mark-live .mark-node:nth-child(4) { animation-delay: 0.75s; }
+.mark-live .mark-match {
+  transform: scale(0);
+  animation:
+    mark-pop 0.45s 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+    mark-beat 3.6s 1.6s ease-in-out infinite;
+}
+.mark-live .mark-spark {
+  display: inline;
+  stroke: var(--color-amber);
+  stroke-dasharray: 0.16 1;
+  stroke-dashoffset: 0.16;
+  opacity: 0;
+  animation: mark-spark 3.6s 1.6s ease-in-out infinite;
+}
+.mark-live .mark-ring {
+  display: inline;
+  fill: none;
+  stroke: var(--color-amber);
+  stroke-width: 2;
+  opacity: 0;
+  animation: mark-ring 3.6s 1.6s ease-out infinite;
+}
+a:hover .mark-live .mark-match,
+a:focus-visible .mark-live .mark-match {
+  filter: drop-shadow(0 0 4px var(--color-amber));
+}
+@keyframes mark-pop {
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes mark-spark {
+  0% { stroke-dashoffset: 0.16; opacity: 0; }
+  6% { opacity: 1; }
+  48% { stroke-dashoffset: -0.84; opacity: 1; }
+  56% { stroke-dashoffset: -1; opacity: 0; }
+  100% { stroke-dashoffset: -1; opacity: 0; }
+}
+@keyframes mark-beat {
+  0%, 50% { transform: scale(1); }
+  56% { transform: scale(1.22); }
+  64%, 100% { transform: scale(1); }
+}
+@keyframes mark-ring {
+  0%, 50% { transform: scale(1); opacity: 0; }
+  53% { opacity: 0.8; }
+  85% { transform: scale(2.3); opacity: 0; }
+  100% { transform: scale(2.3); opacity: 0; }
+}
 @keyframes lat-draw {
   to {
     stroke-dashoffset: 0;
@@ -262,5 +336,16 @@
   .lat-match {
     animation: none;
     opacity: 1;
+  }
+  .mark-live .mark-path,
+  .mark-live .mark-node,
+  .mark-live .mark-match {
+    animation: none;
+    stroke-dashoffset: 0;
+    transform: none;
+  }
+  .mark-live .mark-spark,
+  .mark-live .mark-ring {
+    display: none;
   }
 }
