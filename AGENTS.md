@@ -33,3 +33,4 @@ use the editor.
 
 - Shared site chrome (header, footer, CTA band, hero, steps) lives in `src/components/site/` and wraps every page from `src/routes/__root.tsx`; pages compose these instead of re-styling. Why: one consistent look across pages.
 - Contact emails and nav links live in `src/lib/site.ts`; the contact form builds a mailto link in `src/lib/contact.ts` (tested in `contact.test.ts`). Why: the site has no backend, so the visitor's email app sends the message.
+- Vite optimizeDeps.include in vite.config.ts pre-bundles UI deps; add new Radix/UI packages there. Why: mid-session re-optimization loads two React copies and blanks the preview.
