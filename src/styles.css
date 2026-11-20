@@ -42,6 +42,9 @@
   --color-amber: var(--amber);
   --color-amber-foreground: var(--amber-foreground);
   --color-overlay: var(--overlay);
+  --color-teal-deep: var(--teal-deep);
+  --color-band: var(--band);
+  --color-band-foreground: var(--band-foreground);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
@@ -57,44 +60,54 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/* Lattice brand: deep ink, calm mist, teal paths, one amber "match" highlight. */
+/* Lattice brand, dark petrol look: petrol #0F2E3D, teal #2F7F86, amber #E8941F,
+   mist #DCE9E8, paper #F5F8F7. Teal/mist are lifted on dark surfaces for legibility. */
 :root {
+  color-scheme: dark;
   --radius: 0.875rem;
-  --background: oklch(0.977 0.003 174.5); /* paper */
-  --foreground: oklch(0.286 0.045 232.5); /* ink */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.286 0.045 232.5);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.286 0.045 232.5);
-  --primary: oklch(0.286 0.045 232.5);
-  --primary-foreground: oklch(0.977 0.003 174.5);
-  --secondary: oklch(0.924 0.014 191.4); /* mist */
-  --secondary-foreground: oklch(0.286 0.045 232.5);
-  --muted: oklch(0.924 0.014 191.4);
-  --muted-foreground: oklch(0.49 0.035 225.8);
-  --accent: oklch(0.924 0.014 191.4);
-  --accent-foreground: oklch(0.286 0.045 232.5);
-  --destructive: oklch(0.577 0.245 27.325);
+  --background: oklch(0.22 0.03 232); /* deep petrol */
+  --foreground: oklch(0.977 0.003 174.5); /* paper */
+  --card: oklch(0.271 0.038 231.3);
+  --card-foreground: oklch(0.977 0.003 174.5);
+  --popover: oklch(0.271 0.038 231.3);
+  --popover-foreground: oklch(0.977 0.003 174.5);
+  --primary: oklch(0.924 0.014 191.4); /* mist: light pill buttons */
+  --primary-foreground: oklch(0.286 0.045 232.5); /* petrol */
+  --secondary: oklch(0.312 0.043 228);
+  --secondary-foreground: oklch(0.977 0.003 174.5);
+  --muted: oklch(0.312 0.043 228);
+  --muted-foreground: oklch(0.757 0.029 219.9);
+  --accent: oklch(0.312 0.043 228);
+  --accent-foreground: oklch(0.977 0.003 174.5);
+  --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.875 0.018 188.3); /* line */
-  --input: oklch(0.875 0.018 188.3);
+  --border: oklch(0.38 0.052 234.2);
+  --input: oklch(0.38 0.052 234.2);
   --ring: oklch(0.736 0.154 67.8);
-  --teal: oklch(0.551 0.077 203.3);
-  --amber: oklch(0.736 0.154 67.8);
+  --teal: oklch(0.717 0.082 202.6);
+  --teal-deep: oklch(0.551 0.077 203.3); /* #2F7F86 */
+  --amber: oklch(0.736 0.154 67.8); /* #E8941F */
   --amber-foreground: oklch(0.286 0.045 232.5);
-  --overlay: oklch(0.2 0.03 232 / 60%);
-  --chart-1: oklch(0.551 0.077 203.3);
+  --band: oklch(0.286 0.045 232.5); /* petrol #0F2E3D */
+  --band-foreground: oklch(0.977 0.003 174.5);
+  --gradient-band: linear-gradient(
+    135deg,
+    oklch(0.286 0.045 232.5) 0%,
+    oklch(0.34 0.06 210) 100%
+  );
+  --overlay: oklch(0.12 0.02 232 / 70%);
+  --chart-1: oklch(0.717 0.082 202.6);
   --chart-2: oklch(0.736 0.154 67.8);
-  --chart-3: oklch(0.286 0.045 232.5);
-  --chart-4: oklch(0.49 0.035 225.8);
-  --chart-5: oklch(0.875 0.018 188.3);
-  --sidebar: oklch(0.977 0.003 174.5);
-  --sidebar-foreground: oklch(0.286 0.045 232.5);
-  --sidebar-primary: oklch(0.286 0.045 232.5);
-  --sidebar-primary-foreground: oklch(0.977 0.003 174.5);
-  --sidebar-accent: oklch(0.924 0.014 191.4);
-  --sidebar-accent-foreground: oklch(0.286 0.045 232.5);
-  --sidebar-border: oklch(0.875 0.018 188.3);
+  --chart-3: oklch(0.924 0.014 191.4);
+  --chart-4: oklch(0.757 0.029 219.9);
+  --chart-5: oklch(0.38 0.052 234.2);
+  --sidebar: oklch(0.22 0.03 232);
+  --sidebar-foreground: oklch(0.977 0.003 174.5);
+  --sidebar-primary: oklch(0.924 0.014 191.4);
+  --sidebar-primary-foreground: oklch(0.286 0.045 232.5);
+  --sidebar-accent: oklch(0.312 0.043 228);
+  --sidebar-accent-foreground: oklch(0.977 0.003 174.5);
+  --sidebar-border: oklch(0.38 0.052 234.2);
   --sidebar-ring: oklch(0.736 0.154 67.8);
 }
 
@@ -146,6 +159,10 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(2rem, 4vw, 3rem);
+}
+
+@utility bg-band-gradient {
+  background-image: var(--gradient-band);
 }
 
 @utility eyebrow {

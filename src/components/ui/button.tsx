@@ -21,7 +21,7 @@ const buttonVariants = cva(
         brandOutline:
           "rounded-full border-2 border-primary bg-transparent font-semibold text-foreground hover:bg-muted",
         amber:
-          "rounded-full border-2 border-amber bg-amber font-semibold text-amber-foreground hover:border-primary-foreground hover:bg-primary-foreground",
+          "rounded-full border-2 border-amber bg-amber font-semibold text-amber-foreground hover:border-foreground hover:bg-foreground",
       },
       size: {
         default: "h-9 px-4 py-2",

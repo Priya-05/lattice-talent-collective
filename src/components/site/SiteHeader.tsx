@@ -38,7 +38,7 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <Button asChild variant="brand" size="pillSm" className="ml-2">
+          <Button asChild variant="amber" size="pillSm" className="ml-2">
             <Link to="/contact">Contact us</Link>
           </Button>
         </nav>
@@ -63,7 +63,7 @@ export function SiteHeader() {
                 {item.label}
               </Link>
             ))}
-            <Button asChild variant="brand" size="pill" className="mt-4">
+            <Button asChild variant="amber" size="pill" className="mt-4">
               <Link to="/contact" onClick={() => setOpen(false)}>
                 Start a conversation
               </Link>
