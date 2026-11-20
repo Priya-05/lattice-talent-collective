@@ -29,7 +29,7 @@ export function SiteHeader() {
           aria-label="Lattice home"
           className="flex items-center gap-3 font-display text-[1.35rem] font-extrabold tracking-tight"
         >
-          <LatticeMark live />
+          <LatticeMark />
           Lattice
         </Link>
 
