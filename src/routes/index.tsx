@@ -162,7 +162,7 @@ function Home() {
 
       <nav
         aria-label="On this page"
-        className="sticky top-[68px] z-20 border-y border-border bg-background/95 backdrop-blur"
+        className="sticky top-[var(--header-h)] z-20 border-y border-border bg-background/95 backdrop-blur"
       >
         <div className="wrap flex gap-1 overflow-x-auto py-2.5 [scrollbar-width:none]">
           {JUMP_LINKS.map((l) => (
@@ -177,7 +177,7 @@ function Home() {
         </div>
       </nav>
 
-      <section id="start" className="scroll-mt-32 bg-muted py-16 md:py-20">
+      <section id="start" className="scroll-mt-[calc(var(--header-h)+3.5rem)] bg-muted py-16 md:py-20">
         <div className="wrap">
           <SectionHeading
             eyebrow="Start here"
@@ -206,7 +206,7 @@ function Home() {
         </div>
       </section>
 
-      <section id="services" className="scroll-mt-32 py-16 md:py-24">
+      <section id="services" className="scroll-mt-[calc(var(--header-h)+3.5rem)] py-16 md:py-24">
         <div className="wrap">
           <SectionHeading
             eyebrow="Our services"
@@ -257,7 +257,7 @@ function Home() {
         </div>
       </section>
 
-      <section id="process" className="scroll-mt-32 bg-muted py-16 md:py-20">
+      <section id="process" className="scroll-mt-[calc(var(--header-h)+3.5rem)] bg-muted py-16 md:py-20">
         <div className="wrap grid items-start gap-14 md:grid-cols-2">
           <SectionHeading
             eyebrow="How we work"
@@ -268,7 +268,7 @@ function Home() {
         </div>
       </section>
 
-      <section id="industries" className="scroll-mt-32 py-16 md:py-20">
+      <section id="industries" className="scroll-mt-[calc(var(--header-h)+3.5rem)] py-16 md:py-20">
         <div className="wrap">
           <SectionHeading eyebrow="Industries" title="Where we do our best work." />
           <ul className="mt-10 grid gap-x-10 md:grid-cols-2">
@@ -287,7 +287,7 @@ function Home() {
         </div>
       </section>
 
-      <section id="why" className="scroll-mt-32 bg-muted py-16 md:py-20">
+      <section id="why" className="scroll-mt-[calc(var(--header-h)+3.5rem)] bg-muted py-16 md:py-20">
         <div className="wrap grid gap-12 md:grid-cols-2">
           <SectionHeading
             eyebrow="Why Lattice"
@@ -308,7 +308,7 @@ function Home() {
         </div>
       </section>
 
-      <section id="faq" className="scroll-mt-32 py-16 md:py-20">
+      <section id="faq" className="scroll-mt-[calc(var(--header-h)+3.5rem)] py-16 md:py-20">
         <div className="wrap grid gap-12 md:grid-cols-[0.8fr_1.2fr]">
           <SectionHeading
             eyebrow="Common questions"

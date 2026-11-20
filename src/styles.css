@@ -111,6 +111,17 @@
   --sidebar-ring: oklch(0.736 0.154 67.8);
 }
 
+/* Sticky header height: two rows on phones (logo + tab strip), one row on desktop.
+   Used by the on-page jump bar and by section scroll margins. */
+:root {
+  --header-h: 104px;
+}
+@media (min-width: 768px) {
+  :root {
+    --header-h: 68px;
+  }
+}
+
 @layer base {
   * {
     border-color: var(--color-border);

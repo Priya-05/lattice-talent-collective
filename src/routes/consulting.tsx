@@ -67,7 +67,7 @@ function Consulting() {
           </p>
           <div className="mt-11 grid gap-5 md:grid-cols-2">
             {SERVICES.map((s) => (
-              <div key={s.id} id={s.id} className="scroll-mt-28">
+              <div key={s.id} id={s.id} className="scroll-mt-[calc(var(--header-h)+4rem)]">
               <InfoCard title={s.title}>
                 <p>{s.text}</p>
                 <ul className="mt-5 flex flex-wrap gap-2">

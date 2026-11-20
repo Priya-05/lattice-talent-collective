@@ -35,3 +35,4 @@ use the editor.
 - Contact emails and nav links live in `src/lib/site.ts`; the contact form builds a mailto link in `src/lib/contact.ts` (tested in `contact.test.ts`). Why: the site has no backend, so the visitor's email app sends the message.
 - Vite optimizeDeps.include in vite.config.ts pre-bundles UI deps; add new Radix/UI packages there. Why: mid-session re-optimization loads two React copies and blanks the preview.
 - Service lists (talent + consulting) live in `src/lib/services.ts` and feed the top-menu dropdowns, the Home services section and the Talent/Consulting pages; each service `id` is the anchor on its page. Why: menus and pages never drift apart.
+- Phones get a tab strip in the header, never a hamburger menu (`src/test/site-header.test.tsx` locks this); the sticky header height is the `--header-h` variable in `src/styles.css`, and sticky sub-navs plus section scroll margins read it. Why: the header is two rows on phones, one on desktop.

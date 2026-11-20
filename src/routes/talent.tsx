@@ -63,7 +63,7 @@ function Talent() {
           </p>
           <div className="mt-11 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {TALENT_SERVICES.map((s) => (
-              <div key={s.id} id={s.id} className="scroll-mt-28">
+              <div key={s.id} id={s.id} className="scroll-mt-[calc(var(--header-h)+4rem)]">
                 <InfoCard title={s.title}>
                   <p className="eyebrow mb-2 text-[0.75rem]">{s.bestFor}</p>
                   <p>{s.text}</p>
