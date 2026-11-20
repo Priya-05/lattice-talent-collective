@@ -13,7 +13,7 @@ export function SiteFooter() {
             Lattice
           </Link>
           <p className="mt-4 max-w-xs text-muted-foreground">
-            Staffing and consulting that meet possibilities with purpose.
+            Talent and consulting that meet possibilities with purpose.
           </p>
         </div>
         <div>

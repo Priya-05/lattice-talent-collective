@@ -81,16 +81,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lattice LLC | Staffing and consulting" },
+      { title: "Lattice LLC | Talent and consulting" },
       {
         name: "description",
-        content: "Lattice connects capable people with roles that matter and helps facilities run better.",
+        content: "Lattice connects talented people with roles that matter and helps facilities run better.",
       },
       { name: "author", content: "Lattice LLC" },
-      { property: "og:title", content: "Lattice LLC | Staffing and consulting" },
+      { property: "og:title", content: "Lattice LLC | Talent and consulting" },
       {
         property: "og:description",
-        content: "Lattice connects capable people with roles that matter and helps facilities run better.",
+        content: "Lattice connects talented people with roles that matter and helps facilities run better.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

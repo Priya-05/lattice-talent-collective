@@ -10,9 +10,9 @@ import { buildMailto, INTERESTS, type ContactForm, type Interest } from "@/lib/c
 import { CONTACT } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
-const TITLE = "Contact Lattice LLC | Request staff or consulting";
+const TITLE = "Contact Lattice LLC | Request talent or consulting";
 const DESC =
-  "Tell us about the work. Request staff, ask about warehouse and layout consulting, or send your resume. We reply within one business day.";
+  "Tell us about the work. Request talent, ask about warehouse and layout consulting, or send your resume. We reply within one business day.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

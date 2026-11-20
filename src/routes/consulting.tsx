@@ -54,7 +54,7 @@ function Consulting() {
               <Link to="/contact">Discuss your site</Link>
             </Button>
             <Button asChild variant="brandOutline" size="pill">
-              <Link to="/staffing">See staffing</Link>
+              <Link to="/talent">See talent</Link>
             </Button>
           </>
         }

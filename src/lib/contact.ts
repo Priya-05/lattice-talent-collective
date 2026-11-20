@@ -1,7 +1,7 @@
 import { CONTACT } from "./site";
 
 export const INTERESTS = [
-  { value: "hire", label: "I need staff" },
+  { value: "hire", label: "I need talent" },
   { value: "work", label: "I'm looking for work" },
   { value: "consulting", label: "Warehouse or layout consulting" },
   { value: "other", label: "Something else" },

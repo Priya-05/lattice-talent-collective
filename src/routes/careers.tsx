@@ -64,7 +64,7 @@ function Careers() {
           <div>
             <h2 className="display-lg">What you get with Lattice</h2>
             <p className="mt-4 text-muted-foreground">
-              We place people in Information Technology and Engineering roles.
+              We place talented people in Information Technology and Engineering roles.
             </p>
           </div>
           <ul className="space-y-4 rounded-[14px] border border-border bg-card p-7">

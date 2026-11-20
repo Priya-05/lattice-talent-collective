@@ -6,7 +6,7 @@ export const CONTACT = {
 
 export const NAV = [
   { to: "/", label: "Home" },
-  { to: "/staffing", label: "Staffing" },
+  { to: "/talent", label: "Talent" },
   { to: "/consulting", label: "Consulting" },
   { to: "/careers", label: "Find work" },
 ] as const;

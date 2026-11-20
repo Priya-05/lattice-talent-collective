@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const TITLE = "Lattice LLC | Where possibilities meet purpose";
 const DESC =
-  "Staffing and consulting in one partner. Lattice places IT and engineering talent and helps warehouses and facilities run better.";
+  "Talent and consulting in one partner. Lattice connects IT and engineering professionals with roles that matter, and helps warehouses and facilities run better.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,22 +26,22 @@ export const Route = createFileRoute("/")({
 const PATHS = [
   {
     icon: Users,
-    title: "I need staff",
-    text: "Temporary, temp-to-hire, direct hire, or a full hiring program.",
-    to: "/staffing",
-    cta: "Explore staffing",
+    title: "I need talent",
+    text: "Temporary, temp-to-hire, direct hire, or a full hiring program, with screened people ready to contribute.",
+    to: "/talent",
+    cta: "Explore talent",
   },
   {
     icon: Briefcase,
     title: "I'm looking for work",
-    text: "Meet a recruiter who knows you by name and finds roles that fit.",
+    text: "Meet a recruiter who knows you by name and finds roles that fit your goals.",
     to: "/careers",
-    cta: "Find work",
+    cta: "Find your next role",
   },
   {
     icon: Warehouse,
     title: "I want a better operation",
-    text: "Warehouse flow, slotting, and layout design that does more with your space.",
+    text: "Warehouse flow, slotting, and layout design that helps your space do more.",
     to: "/consulting",
     cta: "Explore consulting",
   },
@@ -54,10 +54,10 @@ const VALUES = [
   },
   {
     title: "Clear at every step",
-    text: "You always know where things stand. We reply within one business day.",
+    text: "You always know where things stand, and we reply within one business day.",
   },
   {
-    title: "Practical results",
+    title: "Results you can see",
     text: "Placements that last and plans that work on the floor, not just on paper.",
   },
 ];
@@ -66,13 +66,13 @@ function Home() {
   return (
     <>
       <PageHero
-        eyebrow="Staffing & consulting"
+        eyebrow="Talent & consulting"
         title="Where possibilities meet purpose."
-        text="Lattice connects capable people with roles that matter, and helps operations make the most of their space. One partner for your team and your site."
+        text="Lattice connects talented people with roles that matter, and helps operations make the most of their space. One partner for your team and your site."
         actions={
           <>
             <Button asChild variant="brand" size="pill">
-              <Link to="/contact">Request staff</Link>
+              <Link to="/contact">Request talent</Link>
             </Button>
             <Button asChild variant="brandOutline" size="pill">
               <Link to="/careers">Find work</Link>
