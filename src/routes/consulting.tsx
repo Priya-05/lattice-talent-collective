@@ -3,6 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaBand } from "@/components/site/CtaBand";
 import { InfoCard, PageHero, Steps } from "@/components/site/PageHero";
 import { Button } from "@/components/ui/button";
+import { CONSULTING_SERVICES } from "@/lib/services";
 
 const TITLE = "Warehouse & layout consulting | Lattice LLC";
 const DESC =
@@ -24,13 +25,11 @@ export const Route = createFileRoute("/consulting")({
 
 const SERVICES = [
   {
-    title: "Warehousing",
-    text: "Make the operation you have run smoother, faster, and safer.",
+    ...CONSULTING_SERVICES[0]!,
     chips: ["Operations & flow assessment", "Slotting & inventory placement", "Labor & capacity planning"],
   },
   {
-    title: "Layout services",
-    text: "Design space that supports the work instead of fighting it.",
+    ...CONSULTING_SERVICES[1]!,
     chips: ["Facility & floor layout", "Racking & material flow", "Space planning for growth"],
   },
 ];
@@ -68,7 +67,8 @@ function Consulting() {
           </p>
           <div className="mt-11 grid gap-5 md:grid-cols-2">
             {SERVICES.map((s) => (
-              <InfoCard key={s.title} title={s.title}>
+              <div key={s.id} id={s.id} className="scroll-mt-28">
+              <InfoCard title={s.title}>
                 <p>{s.text}</p>
                 <ul className="mt-5 flex flex-wrap gap-2">
                   {s.chips.map((c) => (
@@ -78,6 +78,7 @@ function Consulting() {
                   ))}
                 </ul>
               </InfoCard>
+              </div>
             ))}
           </div>
         </div>

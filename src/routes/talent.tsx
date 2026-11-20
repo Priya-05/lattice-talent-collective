@@ -3,6 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaBand } from "@/components/site/CtaBand";
 import { InfoCard, PageHero, Steps } from "@/components/site/PageHero";
 import { Button } from "@/components/ui/button";
+import { TALENT_SERVICES } from "@/lib/services";
 
 const TITLE = "Talent services | Lattice LLC";
 const DESC =
@@ -21,25 +22,6 @@ export const Route = createFileRoute("/talent")({
   }),
   component: Talent,
 });
-
-const SERVICES = [
-  {
-    title: "Temporary talent",
-    text: "Fill peaks, absences, and special projects with screened, ready-to-work people.",
-  },
-  {
-    title: "Temp-to-hire",
-    text: "Work with a candidate on the job first, then convert to a permanent hire when the fit is proven.",
-  },
-  {
-    title: "Direct hire",
-    text: "We find, vet, and present candidates for permanent roles so you can hire with confidence.",
-  },
-  {
-    title: "RPO",
-    text: "When hiring volume outgrows your team, we run the process as an extension of your team.",
-  },
-];
 
 const STEPS = [
   { title: "Tell us what you need", text: "We learn the role, schedule, skills, and culture." },
@@ -80,10 +62,13 @@ function Talent() {
             Every placement starts with understanding the work, the team, and what success looks like.
           </p>
           <div className="mt-11 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {SERVICES.map((s) => (
-              <InfoCard key={s.title} title={s.title}>
-                <p>{s.text}</p>
-              </InfoCard>
+            {TALENT_SERVICES.map((s) => (
+              <div key={s.id} id={s.id} className="scroll-mt-28">
+                <InfoCard title={s.title}>
+                  <p className="eyebrow mb-2 text-[0.75rem]">{s.bestFor}</p>
+                  <p>{s.text}</p>
+                </InfoCard>
+              </div>
             ))}
           </div>
           <div className="mt-7 flex flex-wrap items-center gap-2.5" aria-label="Where we place talent">

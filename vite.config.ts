@@ -21,6 +21,7 @@ export default defineConfig({
     optimizeDeps: {
       include: [
         "@radix-ui/react-dialog",
+        "@radix-ui/react-accordion",
         "@radix-ui/react-slot",
         "@radix-ui/react-label",
         "class-variance-authority",
